@@ -4,10 +4,9 @@
   "engines": {
     "node": "18.x"
   },
-  "description": "webpack starter",
+  "main": "src/googleSearch.js",
   "scripts": {
-    "build": "webpack", 
-    "start": "node googleSearch.js" 
+    "build": "webpack --config webpack.config.js"
   },
   "author": "Ryan Floyd",
   "license": "MIT",
