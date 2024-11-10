@@ -6,7 +6,7 @@
   },
   "description": "webpack starter",
   "scripts": {
-    "postinstall": " wget http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.0.1ubuntu2.17_amd64.deb -O apt.deb && sudo dpkg -i apt.deb && sudo apt-get install wget && sudo apt-get install -y wget curl libx11-dev libxcomposite-dev libxrandr-dev libglu1-mesa libxi6 libgdk-pixbuf2.0-0 libnss3 libatk-bridge2.0-0 libatk1.0-0 libcups2 libxkbcommon0 libxss1 libxtst6 libgtk-3-0 && npx playwright install"
+    "postinstall": "sudo apt install wget && wget http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.0.1ubuntu2.17_amd64.deb -O apt.deb && sudo dpkg -i apt.deb && sudo apt-get install -y wget curl libx11-dev libxcomposite-dev libxrandr-dev libglu1-mesa libxi6 libgdk-pixbuf2.0-0 libnss3 libatk-bridge2.0-0 libatk1.0-0 libcups2 libxkbcommon0 libxss1 libxtst6 libgtk-3-0 && npx playwright install"
   },
   "author": "Ryan Floyd",
   "license": "MIT",
