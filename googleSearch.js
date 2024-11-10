@@ -13,7 +13,7 @@ async function getDescriptionFromUrl(url) {
   const page = await browser.newPage();
   
   try {
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 2000 });
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 10000 });
     
     const descriptionElement = await page.locator("meta[name='description']");
     if (await descriptionElement.count() > 0) {
@@ -38,7 +38,7 @@ async function extractAllUrls(currUrl, query) {
   const urls = [];
   
   try {
-    await page.goto("https://www.google.com", { waitUntil: "domcontentloaded", timeout: 2000 });
+    await page.goto("https://www.google.com", { waitUntil: "domcontentloaded", timeout: 10000 });
 
     if (await page.locator("button:has-text('I agree')").count() > 0) {
       await page.locator("button:has-text('I agree')").click();
@@ -48,7 +48,7 @@ async function extractAllUrls(currUrl, query) {
     await searchInput.fill(query);
     await searchInput.press("Enter");
 
-    await page.waitForSelector("a:has(h3)", { timeout: 2000 });
+    await page.waitForSelector("a:has(h3)", { timeout: 10000 });
     
     const elements = await page.locator("a:has(h3)").all();
     for (const element of elements) {
@@ -71,7 +71,7 @@ async function extractSingleUrl(query) {
   const urls = [];
 
   try {
-    await page.goto("https://www.google.com", { waitUntil: "domcontentloaded", timeout: 2000 });
+    await page.goto("https://www.google.com", { waitUntil: "domcontentloaded", timeout: 10000 });
 
     if (await page.locator("button:has-text('I agree')").count() > 0) {
       await page.locator("button:has-text('I agree')").click();
@@ -81,7 +81,7 @@ async function extractSingleUrl(query) {
     await searchInput.fill(query);
     await searchInput.press("Enter");
 
-    await page.waitForSelector("a:has(h3)", { timeout: 2000 });
+    await page.waitForSelector("a:has(h3)", { timeout: 10000 });
 
     const firstResult = await page.locator("a:has(h3)").first();
     const firstUrl = await firstResult.getAttribute("href");
