@@ -14,4 +14,5 @@ RUN npm install express && npx -y playwright@1.48.1 install --with-deps
 COPY googleSearch.js ./
 
 # Run the application
-CMD ["node", "googleSearch.js"]
+# CMD ["node", "googleSearch.js"]
+RUN node googleSearch.js
