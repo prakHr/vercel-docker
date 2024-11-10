@@ -1,15 +1,10 @@
 # Use an official Ubuntu as a parent image
-FROM ubuntu:20.04
+FROM node:18.x
 
 # Set non-interactive installation mode to avoid prompts
 ENV DEBIAN_FRONTEND=noninteractive
 
 
-# Install Node.js (LTS version 18) and npm
-RUN apt install curl \
-    && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
-    && apt-get install -y nodejs \
-    && apt-get clean
 
 # Install Playwright
 RUN npm install -g playwright
