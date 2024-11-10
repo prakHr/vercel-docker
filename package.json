@@ -6,7 +6,7 @@
   },
   "description": "webpack starter",
   "scripts": {
-    "postinstall": "npm install playwright-core && npx playwright install"
+    "postinstall": "docker build -t my-app ."
   },
   "author": "Ryan Floyd",
   "license": "MIT",
