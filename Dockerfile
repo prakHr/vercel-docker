@@ -8,11 +8,11 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies including Playwright and Express
-RUN npm install express && npx -y playwright@1.48.1 install --with-deps
+RUN npm install express && npx -y playwright install --with-deps
 
 # Copy the rest of your application code (e.g., googleSearch.js)
 COPY googleSearch.js ./
 
 # Run the application
-# CMD ["node", "googleSearch.js"]
-RUN node googleSearch.js
+CMD ["node", "googleSearch.js"]
+# RUN node googleSearch.js
