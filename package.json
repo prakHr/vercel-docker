@@ -6,7 +6,7 @@
   },
   "description": "webpack starter",
   "scripts": {
-    "postinstall": "npm install wget playwright && npx playwright install"
+    "postinstall": "npm install playwright-core && npx playwright install --skip-browsers"
   },
   "author": "Ryan Floyd",
   "license": "MIT",
