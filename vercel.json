@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "builds": [{
-    "src": "googleSearch.js",
-    "use":"@vercel/node"
+  "builds": [
+    {
+      "src": "Dockerfile",
+      "use": "@vercel/docker"
+    }
 
-  }
-    
-    
+
   ],
   "routes": [
     {
