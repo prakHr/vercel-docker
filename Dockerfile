@@ -6,10 +6,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 
 # Install Node.js (LTS version 18) and npm
-RUN sudo apt install curl \
+RUN apt install curl \
     && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
-    && sudo apt-get install -y nodejs \
-    && sudo apt-get clean
+    && apt-get install -y nodejs \
+    && apt-get clean
 
 # Install Playwright
 RUN npm install -g playwright
