@@ -1,5 +1,5 @@
 # Use an official Ubuntu as a parent image
-FROM node:18.x
+FROM node:18.0
 
 # Set non-interactive installation mode to avoid prompts
 ENV DEBIAN_FRONTEND=noninteractive
