@@ -4,7 +4,6 @@ FROM ubuntu:20.04
 # Set non-interactive installation mode to avoid prompts
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Update and install required dependencies
 RUN apt-get update && apt-get install -y \
     wget \
     curl \
