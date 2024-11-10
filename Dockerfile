@@ -1,5 +1,5 @@
 # Use Node.js as the base image
-FROM node:18
+FROM ubuntu:20.04
 
 # Set the working directory in the container
 WORKDIR /app
