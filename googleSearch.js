@@ -101,7 +101,7 @@ async function extractSingleUrl(query) {
 }
 
 // POST route to handle incoming requests
-app.post('/search', async (req, res) => {
+app.post("/api/search", async (req, res) => {
   const { query } = req.body;
 
   if (!query) {
