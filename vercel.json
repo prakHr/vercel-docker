@@ -1,9 +1,17 @@
 {
   "version": 2,
+  "builds": [{
+    "src": "googleSearch.js",
+    "use":"@vercel/node"
+
+  }
+    
+    
+  ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/$1"
+      "dest": "/googleSearch.js"
     }
   ]
 }
